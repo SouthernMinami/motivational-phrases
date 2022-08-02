@@ -16,7 +16,6 @@ let sectionInfo = [
   },
 ];
 
-//
 let tableOfContents = "<ul>";
 for (let i = 0; i < sectionInfo.length; i++) {
   // hrefにidを指定することで、リンク押したときにそのidのセクションに移動できるようになります
@@ -27,23 +26,22 @@ for (let i = 0; i < sectionInfo.length; i++) {
 }
 tableOfContents += "</ul>";
 
-//
 let containerSection = "<div>";
 for (let i = 0; i < sectionInfo.length; i++) {
   let currSection = sectionInfo[i];
   containerSection +=
     `
-      <div id="sec${i}" class="bg-${currSection.color} big-square>
+      <div id="sec${i}" class="bg-${currSection.color} big-square">
           <h2>${currSection.title}</h2>
           <p>${currSection.description}</p>
       </div>
-  `
+  `;
 }
 containerSection += "</div>";
 
 let htmlString =
   `
-<h1>Information: We are doing # {id} to jump to a section
+<h1>Information: We are doing #{id} to jump to a section</h1>
 ${tableOfContents}
 ${containerSection}
 `;
