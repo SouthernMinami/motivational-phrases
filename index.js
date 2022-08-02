@@ -1,5 +1,4 @@
 // ここから書いてください。
-// 名言壁紙を生成する関数　motivationalSpeechWallpaper(obj)
 function motivationalSpeechWallpaper(wallpaper) {
   let container = document.createElement("div");
   container.classList.add("container", "d-flex", "justify-content-center");
@@ -43,7 +42,6 @@ class Wallpaper {
   }
 }
 
-// 関数呼び出しの例
 let domObj = document.getElementById("target");
 
 let wallpaper1 = new Wallpaper("Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away. - Antoine de Saint", "cc3e50", "https://cdn.pixabay.com/photo/2020/06/12/03/06/magnifying-glass-5288877__340.jpg", "center", "center", domObj);
